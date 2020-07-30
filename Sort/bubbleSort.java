@@ -1,5 +1,8 @@
 import java.io.*;
 import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
 
 public class Solution{
     public static void main(String[] args){
@@ -16,7 +19,7 @@ public class Solution{
         while(!isSorted){
             isSorted = true;
             int lastUnsorted = array.length - 1;
-            for(int i = 0; i < array.length - 1; i++){
+            for(int i = 0; i < lastUnsorted; i++){
                 if(array[i] > array[i+1] ){
                     swap(array, i , i+1);
                     isSorted = false;
